@@ -1,9 +1,9 @@
-import { CountryList } from '@/components/CountryList'
+import { CountryAll } from '@/components/CountryAll'
 
-export default function AllCountries () {
+export default function Countries () {
   return (
     <>
-        <CountryList />
+        <CountryAll />
     </>
   )
 }
