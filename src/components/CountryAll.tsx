@@ -17,10 +17,13 @@ export const CountryAll = () => {
     });
   }, [countries]);
 
+  // count the number of countries.
+  const countryCount = sortedCountries.length;
+
   return (
-    <div className="max-w-lg mx-auto">
-      <h1 className="text-2xl font-bold mb-4">List of Countries</h1>
-      <ul>
+    <>
+      <h1 className="text-3xl font-bold mb-10">Hurray! We&apos;ve Found {countryCount} Amazing Countries on Our Beloved Planet!</h1>
+      <ul className="columns-4 gap-x-10">
         {loading ? (
           <li className="p-4">Loading...</li>
         ) : (
@@ -28,8 +31,8 @@ export const CountryAll = () => {
             {Array.isArray(countries) && countries.length > 0 ? (
               sortedCountries.map(country => (
                 <li key={country.cca3} className="mb-2">
-                  <Link href={`/country/${country.cca3}`} className="hover:text-neutral-500">
-                    {country.name.common} - {country.name.official}
+                  <Link href={`/country/${country.cca3}`} className="text-md hover:text-neutral-500 font-light">
+                    {country.name.common} <span className="text-xs text-neutral-400">({country.cca3})</span>
                   </Link>
                 </li>
               ))
@@ -39,6 +42,6 @@ export const CountryAll = () => {
           </>
         )}
       </ul>
-    </div>
+    </>
   );
 };
