@@ -18,11 +18,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
-          <NavigationMenu />
+        <header className="bg-neutral-800 py-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between">
+              <span className="text-lg text-neutral-200 font-bold">HW Countries</span>
+              <NavigationMenu />
+            </div>
+          </div>
         </header>
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-          {children}
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex min-h-screen flex-col items-start justify-start py-24 leading-8">
+            {children}
+          </div>
         </main>
       </body>
     </html>
