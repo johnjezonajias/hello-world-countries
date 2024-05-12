@@ -7,7 +7,6 @@ Hello World Countries is a web application that allows users to explore detailed
 - **Detailed Information:** Access comprehensive details about each country.
 - **Geographic Data:** View maps and flag images for each country.
 - **Borders and Relationships:** Explore bordering countries and understand international relationships.
-- **Socio-Economic Factors:** Gain insights into socio-economic indicators.
 - **Stay Informed:** Keep up-to-date with the latest data.
 
 ## Getting Started
